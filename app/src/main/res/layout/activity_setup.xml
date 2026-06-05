@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText, RtlHardcoded"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎴 고스톱 점수 계산기"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="30dp"
+            android:textColor="#333333"/>
+
+        <RadioGroup
+            android:id="@+id/rgPlayerCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="25dp">
+
+            <RadioButton
+                android:id="@+id/rb2Players"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2인"
+                android:textSize="16sp"
+                android:layout_marginRight="15dp" />
+
+            <RadioButton
+                android:id="@+id/rb3Players"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3인"
+                android:textSize="16sp"
+                android:checked="true"
+                android:layout_marginRight="15dp" />
+
+            <RadioButton
+                android:id="@+id/rb4Players"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4인"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etPlayer1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="플레이어 1 이름"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPlayer2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="플레이어 2 이름"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPlayer3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="플레이어 3 이름"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:layout_marginBottom="12dp" />
+
+        <EditText
+            android:id="@+id/etPlayer4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="플레이어 4 이름"
+            android:inputType="text"
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:layout_marginBottom="30dp" />
+
+        <Button
+            android:id="@+id/btnStartGame"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="게임 시작"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"/>
+        <Button
+            android:id="@+id/btnHistories"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="이전 게임 결과"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#009688"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</ScrollView>
