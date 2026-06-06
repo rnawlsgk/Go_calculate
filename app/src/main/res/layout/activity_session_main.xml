@@ -48,7 +48,7 @@
         android:orientation="vertical"
         android:background="#F9F9F9"
         android:padding="12dp"
-        android:layout_marginBottom="25dp">
+        android:layout_marginBottom="10dp">
     </LinearLayout>
 
     <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#D3D3D3" android:layout_marginBottom="20dp"/>
@@ -72,8 +72,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="10dp">
+            android:gravity="center_vertical">
 
             <TextView
                 android:layout_width="wrap_content"
