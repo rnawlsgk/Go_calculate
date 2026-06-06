@@ -1,5 +1,6 @@
-package com.example.gogo.history // 💡 본인의 패키지명 확인
+package com.example.gogo.history
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.gogo.R
 import com.google.gson.Gson
 
+@SuppressLint("SetTextI18n")
 // 💡 리스트가 통째로 날아가서 텅 볐을 때 화면 처리를 위해 공백 리스너(onEmptyListener)를 추가했습니다.
 class HistoryAdapter(
     private val historyList: ArrayList<GameHistory>,
@@ -68,7 +70,7 @@ class HistoryAdapter(
                 setTitle("기록 삭제")
                 setMessage("이 게임 기록을 정말로 삭제하시겠습니까?")
 
-                setPositiveButton("삭제") { dialog, _ ->
+                setPositiveButton("삭제") { _, _ ->
                     // 1. 현재 누른 아이템의 최신 위치(인덱스)를 다시 안전하게 가져옴
                     val actualPosition = holder.adapterPosition
                     if (actualPosition != RecyclerView.NO_POSITION) {

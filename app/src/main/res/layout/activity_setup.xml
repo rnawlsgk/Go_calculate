@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="HardcodedText, RtlHardcoded"
+    tools:ignore="HardcodedText, RtlHardcoded, autofill"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -33,7 +33,7 @@
             <RadioButton
                 android:id="@+id/rb2Players"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:text="2인"
                 android:textSize="16sp"
                 android:layout_marginRight="15dp" />
@@ -41,7 +41,7 @@
             <RadioButton
                 android:id="@+id/rb3Players"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:text="3인"
                 android:textSize="16sp"
                 android:checked="true"
@@ -50,7 +50,7 @@
             <RadioButton
                 android:id="@+id/rb4Players"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="48dp"
                 android:text="4인"
                 android:textSize="16sp" />
         </RadioGroup>
@@ -58,7 +58,7 @@
         <EditText
             android:id="@+id/etPlayer1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="플레이어 1 이름"
             android:inputType="text"
             android:maxLines="1"
@@ -68,7 +68,7 @@
         <EditText
             android:id="@+id/etPlayer2"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="플레이어 2 이름"
             android:inputType="text"
             android:maxLines="1"
@@ -78,7 +78,7 @@
         <EditText
             android:id="@+id/etPlayer3"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="플레이어 3 이름"
             android:inputType="text"
             android:maxLines="1"
@@ -88,7 +88,7 @@
         <EditText
             android:id="@+id/etPlayer4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:hint="플레이어 4 이름"
             android:inputType="text"
             android:maxLines="1"

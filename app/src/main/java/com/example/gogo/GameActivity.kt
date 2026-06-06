@@ -1,5 +1,6 @@
 package com.example.gogo
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -26,12 +27,14 @@ class GameActivity : AppCompatActivity() {
     private val peeBakCheckBoxes = mutableListOf<CheckBox>()
     private val goBakCheckBoxes = mutableListOf<CheckBox>()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
         playerCount = intent.getIntExtra("PLAYER_COUNT", 3)
         secondsElapsed = intent.getLongExtra("SECONDS_ELAPSED", 0L)
+        @Suppress("UNCHECKED_CAST")
         originalScores = intent.getSerializableExtra("PLAYER_SCORES") as? HashMap<String, Int> ?: hashMapOf()
 
         for (i in 1..playerCount) {
@@ -109,7 +112,7 @@ class GameActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            var baseScore = scoreStr.toInt()
+            val baseScore = scoreStr.toInt()
             val goCount = if (goStr.isNotEmpty()) goStr.toInt() else 0
 
             //점수 배수 계산

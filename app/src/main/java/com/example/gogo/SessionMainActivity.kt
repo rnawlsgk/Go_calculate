@@ -1,5 +1,6 @@
-package com.example.gogo // 본인의 패키지명에 맞게 변경하세요
+package com.example.gogo
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,7 @@ import androidx.core.content.edit
 import com.example.gogo.history.GameHistory
 import com.example.gogo.history.PlayerRecord
 
+@Suppress("UNCHECKED_CAST")
 class SessionMainActivity : AppCompatActivity() {
 
     private var playerCount = 3
@@ -27,6 +29,7 @@ class SessionMainActivity : AppCompatActivity() {
     private lateinit var btnStartRound: Button
     private lateinit var btnEndSession: Button
 
+    @SuppressLint("DefaultLocale")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_session_main)
@@ -34,7 +37,6 @@ class SessionMainActivity : AppCompatActivity() {
         // 데이터 접수
         playerCount = intent.getIntExtra("PLAYER_COUNT", 3)
         secondsElapsed = intent.getLongExtra("SECONDS_ELAPSED", 0L)
-
         val incomingScores = intent.getSerializableExtra("PLAYER_SCORES") as? HashMap<String, Int>
         if (incomingScores != null) {
             playerScores = incomingScores
@@ -139,7 +141,7 @@ class SessionMainActivity : AppCompatActivity() {
                 setView(customTextView) // 기본 setMessage() 대신 위에서 예쁘게 꾸민 customTextView를 삽입
 
                 // 5. 팝업창 내부의 '게임종료' 버튼 설정
-                setPositiveButton("게임종료") { dialog, which ->
+                setPositiveButton("게임종료") { _, _ ->
                     // -------------------------------------------------------------
                     // 💾 [여기서부터 히스토리 SharedPreferences + GSON 저장 로직]
                     // -------------------------------------------------------------
