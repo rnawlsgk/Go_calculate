@@ -118,7 +118,8 @@ class GameActivity : AppCompatActivity() {
             //점수 배수 계산
             //1고, 2고도 2배로 수정
             var multiplier = 1
-            /*if (goCount == 1) baseScore += 1
+            /*if  **수정 전 고 규칙 1고 +1, 2고 +2, 3고 부터 *2
+            (goCount == 1) baseScore += 1
             if (goCount == 2) baseScore += 2
             if (goCount >= 3) {
                 multiplier *= 2.0.pow((goCount - 2).toDouble()).toInt()

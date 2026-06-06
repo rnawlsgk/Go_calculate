@@ -86,7 +86,6 @@ class SetupActivity : AppCompatActivity() {
         btnHistories.setOnClickListener {
             val intent = Intent(this, HistoryActivity::class.java)
             startActivity(intent)
-            finish()
         }
     }
 }
